@@ -3,8 +3,60 @@
 @tailwind utilities;
 
 body {
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-button{
-    font-family: "Poppins", sans-serif;
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-btn__burger {
+  position: relative;
+  width: 40px;
+  height: 4px;
+  background: #1e1e1e;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 40px;
+  height: 4px;
+  background: #1e1e1e;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-btn__burger::before {
+  transform: translateY(-16px);
+}
+
+.menu-btn__burger::after {
+  transform: translateY(16px);
+}
+
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+  background: #ffffff;
+}
+
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  background: #ffffff;
 }
