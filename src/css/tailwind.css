@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .box-style {
+    @apply flex flex-col gap-1 min-w-64 -z-10;
+  }
+  .contact-box {
+    @apply flex flex-col items-center gap-2;
+  }
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -59,4 +68,14 @@ button {
 .menu-btn.open .menu-btn__burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
   background: #ffffff;
+}
+
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
