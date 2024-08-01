@@ -4,10 +4,18 @@
 
 @layer components {
   .box-style {
-    @apply flex flex-col gap-1 min-w-64 -z-10;
+    @apply flex flex-col gap-1 min-w-64 -z-10 lg:min-w-72;
   }
   .contact-box {
     @apply flex flex-col items-center gap-2;
+  }
+  .Category-box {
+    @apply flex flex-col gap-5 lg:w-full ;
+  }
+  .customer-box{
+    @apply bg-primary min-w-full px-5 py-3 rounded-lg lg:min-w-[800px] lg:px-5 lg:pt-3 ;
+      
+    
   }
 }
 
@@ -79,3 +87,7 @@ button {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
